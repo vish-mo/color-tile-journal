@@ -4,6 +4,10 @@ A simple web app to visualize your daily moods and journal entries over the past
 
 Built with **React + Vite + TypeScript**, with a focus on performance, accessibility, and a delightful user experience.
 
+## Live Demo
+
+👉 [Launch Color Tile Journal](https://color-tile-journal.vercel.app/)
+
 ---
 
 ## Features

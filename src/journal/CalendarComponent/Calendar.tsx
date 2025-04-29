@@ -230,7 +230,7 @@ export default function Calendar() {
                 onCancel={cancelNote}
             />
             <footer style={{ textAlign: 'center', marginTop: '2rem', fontSize: '0.8rem', color: '#6B7280' }}>
-                Built by Vishakha | <a href="https://github.com/vish-mo/color-tile-journal" target="_blank" rel="noopener noreferrer" style={{ color: '#3B82F6' }}>View Source on GitHub</a>
+                Built with React + TypeScript | <a href="https://github.com/vish-mo/color-tile-journal" target="_blank" rel="noopener noreferrer" style={{ color: '#3B82F6' }}>View Source on GitHub</a>
             </footer>
         </div>
     )

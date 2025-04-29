@@ -1,10 +1,11 @@
 export const getPastMonth = () => {
-    const days = [];
+    const dates: string[] = [];
     const today = new Date();
-    for(let i = 0; i < 30; i++) {
-        const date = new Date();
-        date.setDate(today.getDate() - i);
-        days.push(date.toISOString().split('T')[0]);
+    const pstDate = new Date(today.toLocaleString("en-US", { timeZone: "America/Los_Angeles" }));
+    for (let i = 29; i >= 0; i--) {
+        const date = new Date(pstDate);
+        date.setDate(date.getDate() - i);
+        dates.push(date.toISOString().split('T')[0]); // get YYYY-MM-DD
     }
-    return days;
+    return dates;
 }

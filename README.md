@@ -1,12 +1,55 @@
-# React + Vite
+# Color Tile Journal 🎨🗓️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple web app to visualize your daily moods and journal entries over the past 30 days.
 
-Currently, two official plugins are available:
+Built with **React + Vite + TypeScript**, with a focus on performance, accessibility, and a delightful user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 📅 Calendar-aligned grid (Mon–Sun headers)
+- 🎨 Color-coded days to represent moods
+- 📝 Editable journal notes per day
+- 🚀 Performance optimized with lazy loading and localStorage
+- 🧠 Accessible design (keyboard navigation, screen reader friendly)
+- 🎉 Load sample data to explore immediately
+- 🔄 Reset journal to start fresh
+
+---
+
+## Tech Stack
+
+- React
+- Vite
+- TypeScript
+- LocalStorage API
+- Custom Modal UI
+- CSS Flexbox + Grid Layout
+
+---
+
+## Getting Started
+
+1. **Clone the repo**
+```bash
+git clone https://github.com/your-username/color-tile-journal.git
+```
+2. **Install dependencies**
+```bash
+npm install
+```
+3. **Run locally**
+```bash
+npm run dev
+```
+4. Open http://localhost:5173 in your browser.
+
+## Project Philosophy
+- Fast and lightweight: Only essential libraries, optimized for quick interaction.
+- User-friendly: Simple enough to use without a tutorial.
+- Accessible: Built to be usable for all users, with keyboard and screen reader support.
+- Extendable: Easily add more moods, customize colors, or extend to full month view.
+
+## Author
+Built with 💛 by Vishakha — [Portfolio link](https://bit.ly/vishakhaportfolio)

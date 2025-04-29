@@ -1,5 +1,10 @@
 # Color Tile Journal 🎨🗓️
 
+[![Built with Vite](https://img.shields.io/badge/Built%20With-Vite-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Built with React](https://img.shields.io/badge/Frontend-React-61DAFB?logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/Language-TypeScript-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
+
 A simple web app to visualize your daily moods and journal entries over the past 30 days.
 
 Built with **React + Vite + TypeScript**, with a focus on performance, accessibility, and a delightful user experience.

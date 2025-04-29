@@ -55,5 +55,10 @@ npm run dev
 - Accessible: Built to be usable for all users, with keyboard and screen reader support.
 - Extendable: Easily add more moods, customize colors, or extend to full month view.
 
+## License
+
+This project is licensed under the MIT License.  
+See the [LICENSE](./LICENSE) file for more details.
+
 ## Author
 Built with 💛 by Vishakha — [Portfolio link](https://bit.ly/vishakhaportfolio)

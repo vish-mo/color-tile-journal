@@ -21,10 +21,6 @@ type SingleTileData = {
 
 type TileData = Record<string, SingleTileData>;
 
-const past30Days = getPastMonth();
-const firstDayOfWeekFromDate = new Date(past30Days[0]).getDay();
-const firstDayOfWeek = firstDayOfWeekFromDate === 0 ? 6 : firstDayOfWeekFromDate - 1;
-
 const colorOptions = ['#D1FAE5', '#FDE68A', '#FCA5A5', '#E0E7FF', '#A7F3D0'];
 
 const sampleNotes = [
@@ -46,7 +42,12 @@ export default function Calendar() {
     // For adding a note
     const [editedDate, setEditedDate] = useState<string|null>(null);
     const [noteText, setNoteText] = useState<string>('');
+
     const [sampleDataLoaded, setSampleDataLoaded] = useState<boolean>(false);
+
+    const past30Days = getPastMonth();
+    const firstDayOfWeekFromDate = new Date(past30Days[past30Days.length - 1]).getDay();
+    const firstDayOfWeek = firstDayOfWeekFromDate === 0 ? 6 : firstDayOfWeekFromDate - 1;
 
     const loadSampleData = () => {
         const refreshedTileData: TileData = {};
@@ -179,7 +180,7 @@ export default function Calendar() {
             }}>
                 {Array.from({length: 7}).map((_, idx) =>(
                     <div
-                        key={'empty-'+idx}
+                        key={'day-header-'+idx}
                         style={{
                             fontSize: '0.8rem',
                             backgroundColor: 'lavenderblush',

@@ -174,9 +174,10 @@ export default function Calendar() {
             <div style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(7, 80px)', // 7 tiles per row, 60px each
-                gap: '10px',
-                width: 'fit-content',
-                margin: '0 auto'
+                gap: '12px',
+                width: '100%',
+                margin: '0 auto',
+                maxWidth: '600px',
             }}>
                 {Array.from({length: 7}).map((_, idx) =>(
                     <div
@@ -187,7 +188,8 @@ export default function Calendar() {
                             border: 'none',
                             borderRadius: '4px',
                             padding: '2px 4px',
-                            fontWeight: 'bold'
+                            fontWeight: 'bold',
+                            width: '80px',
                         }}
                     >{days[idx as keyof typeof days]}</div>
                 ))}

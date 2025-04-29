@@ -56,8 +56,7 @@ npm run dev
 - Extendable: Easily add more moods, customize colors, or extend to full month view.
 
 ## License
-
-This project is licensed under the MIT License.  
+This project is licensed under MIT license.
 See the [LICENSE](./LICENSE) file for more details.
 
 ## Author

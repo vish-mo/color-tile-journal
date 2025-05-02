@@ -21,7 +21,7 @@ const Insights = () => {
     }
 
     return (
-        <section>
+        <section style={{ display:'flex', flexDirection: 'column', alignItems: 'center' }}>
             <h2 className="section-heading">Mood Insights</h2>
             <MoodPieChart tileData={tileData} />
             <MoodTreeMap tileData={tileData} onShowNotes={setNotesSidebar}/>

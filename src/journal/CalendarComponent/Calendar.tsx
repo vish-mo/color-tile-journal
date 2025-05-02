@@ -1,7 +1,9 @@
 import {getPastMonth} from "../../utils/calendarutils";
 import {useEffect, useState, lazy, Suspense} from "react";
-import {days} from "../../utils/journalConstants";
+import {ColorOptions, days} from "../../utils/journalConstants";
 import './Calendar.css';
+import { useNavigate } from 'react-router-dom';
+
 
 const Tile = lazy(()=> import('../TileComponent/Tile'));
 const NoteModal = lazy(() => import('../NoteModalComponent/NoteModal'));
@@ -20,9 +22,6 @@ type SingleTileData = {
 }
 
 type TileData = Record<string, SingleTileData>;
-
-const colorOptions = ['#D1FAE5', '#FDE68A', '#FCA5A5', '#E0E7FF', '#A7F3D0'];
-
 const sampleNotes = [
     'Walked by the river 🌊',
     'Good meeting today 💬',
@@ -37,6 +36,7 @@ const sampleNotes = [
 ];
 
 export default function Calendar() {
+    const navigate = useNavigate();
     const [tileData, setTileData] = useState<TileData>({});
 
     // For adding a note
@@ -52,7 +52,7 @@ export default function Calendar() {
     const loadSampleData = () => {
         const refreshedTileData: TileData = {};
         past30Days.forEach(date => {
-            const randomColor = colorOptions[Math.floor(Math.random() * colorOptions.length)];
+            const randomColor = ColorOptions[Math.floor(Math.random() * ColorOptions.length)];
             const randomNotes = sampleNotes[Math.floor(Math.random() * sampleNotes.length)];
             refreshedTileData[date] = {
                 color: randomColor,
@@ -60,6 +60,7 @@ export default function Calendar() {
             };
         });
         setTileData(refreshedTileData);
+        // localStorage.setItem('colorTileJournal', JSON.stringify(refreshedTileData));
         setSampleDataLoaded(true);
     }
 
@@ -95,8 +96,8 @@ export default function Calendar() {
 
     const handleTileClick = (date: string) => {
         const currentColor = tileData[date]?.color || '#E5E7EB';
-        const nextColorIdx = (colorOptions.indexOf(currentColor)+1) % colorOptions.length;
-        const nextColor = colorOptions[nextColorIdx];
+        const nextColorIdx = (ColorOptions.indexOf(currentColor)+1) % ColorOptions.length;
+        const nextColor = ColorOptions[nextColorIdx];
         setTileData(prevState => ({
             ...prevState, [date] : {
                 ...prevState[date],
@@ -153,6 +154,19 @@ export default function Calendar() {
                         onClick={loadSampleData}
                     >
                         {sampleDataLoaded ? 'Sample Loaded' : 'Load Sample Journal'}
+                    </button>
+                    <button
+                        className={'sample-data-button'}
+                        style={{
+                            backgroundColor: sampleDataLoaded ? 'cornflowerblue' : '#9CA3AF',
+                        }}
+
+                        onClick={() => {
+                            // if (sampleDataLoaded)
+                                navigate('/insights');
+                        }}
+                    >
+                        Show Insights
                     </button>
                 </div>
             </div>

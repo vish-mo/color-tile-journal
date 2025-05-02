@@ -22,3 +22,27 @@ export const days = {
     5: 'Sat',
     6: 'Sun'
 }
+
+export const ColorOptions = ['#D1FAE5', '#FDE68A', '#FCA5A5', '#E0E7FF', '#A7F3D0'];
+export const ColorLegend = [
+    { color: '#D1FAE5', label: 'Great Day' },
+    { color: '#FDE68A', label: 'Okay Day' },
+    { color: '#FCA5A5', label: 'Tough Day' },
+    { color: '#E0E7FF', label: 'Calm Day' },
+    { color: '#A7F3D0', label: 'Creative Day' }
+];
+
+export const ColorLegends = {
+    '#D1FAE5': 'Great Day',
+    '#FDE68A': 'Okay Day',
+    '#FCA5A5': 'Tough Day',
+    '#E0E7FF': 'Calm Day',
+    '#A7F3D0': 'Creative Day',
+}
+
+export type SingleTileData = {
+    color: string;
+    note?: string;
+}
+
+export type TileData = Record<string, SingleTileData>;
